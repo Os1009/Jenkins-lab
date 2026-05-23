@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_USER = 'zeyadgamal'
+        DOCKERHUB_USER = 'osama107'
         IMAGE_TAG = "${DOCKERHUB_USER}/service-app:${BUILD_NUMBER}"
     }
 
@@ -14,8 +14,8 @@ pipeline {
                 checkout scmGit(
                     branches: [[name: 'main']],
                     userRemoteConfigs: [[
-                        url: 'https://github.com/Zeyad-Gamal/Jenkins-Final-Assignment.git',
-                        // credentialsId: 'github-creds'
+                        url: 'https://github.com/Os1009/Jenkins-lab',
+                    
                         credentialsId: 'jenkins-lab'
                     ]]
                 )
